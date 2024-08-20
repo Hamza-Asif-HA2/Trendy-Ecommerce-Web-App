@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*::selection{
+ background-color:rgb(194 ,65 ,12);
+ color: white;
+}
