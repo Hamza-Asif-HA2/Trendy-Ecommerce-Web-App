@@ -21,7 +21,7 @@ function Watches() {
         <CateButton btnText={"Women"} toPage={"women/watches"} />
         <CateButton btnText={"Kids"} toPage={"kids/watches"} />
       </div>
-      <div class="hidden sm:grid text-center sm:w-10/12 grid-cols-2 md:w-10/12  md:grid-cols-2 lg:grid-cols-3 gap-6 my-2  lg:w-8/12 bg-red-500">
+      <div class="hidden sm:grid text-center sm:w-10/12 grid-cols-2 md:w-10/12  md:grid-cols-2 lg:grid-cols-3 gap-6 my-2  lg:w-8/12 ">
         <CategoryCard
           title={"Men"}
           category={"men/watches"}

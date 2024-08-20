@@ -36,7 +36,7 @@ export default function Home() {
           Our Categories
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4 my-4">
           <CategoryCard
             title={"Men"}
             category={"men"}
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-gray-900"></div>
           </div>
         ) : (
-          <div className="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 mx-2 my-3">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mx-2 my-3">
             {products.map((product) => (
               <Card
                 key={product.id}
