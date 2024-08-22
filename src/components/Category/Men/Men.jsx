@@ -1,4 +1,4 @@
-import React from "react";
+
 import CategoryCard from "../../Card/CategoryCard";
 import CateButton from "../../Buttons/CateButton";
 import Card from "../../Card/Card";
@@ -20,9 +20,9 @@ function Men() {
         <CateButton btnText={"T-Shirts"} toPage={"tshirts"} />
         <CateButton btnText={"Shirts"} toPage={"shirts"} />
         <CateButton btnText={"Trousers"} toPage={"trousers"} />
-        <CateButton btnText={"Watches"} toPage={"watches"} />
+        <CateButton btnText={"Watches"} toPage={"watches/all"} />
       </div>
-      <div class="hidden sm:grid text-center  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-2 mx-2">
+      <div className="hidden sm:grid text-center  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-2 mx-2">
         <CategoryCard
           title={"T-Shirts"}
           category={"tshirts"}

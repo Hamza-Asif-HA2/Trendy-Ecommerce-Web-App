@@ -66,7 +66,7 @@ export default function Home() {
 
           <CategoryCard
             title={"Watches"}
-            category={"watches"}
+            category={"watches/all"}
             imageUrl={
               "https://images.unsplash.com/photo-1535346256685-0527f1dfd658?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fFdhdGNoZXN8ZW58MHx8MHx8fDA%3D"
             }
