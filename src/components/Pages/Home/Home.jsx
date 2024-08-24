@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CategoryCard from "../../Card/CategoryCard";
 import Card from "../../Card/Card";
 import { useProducts } from "../../Firebase/Fetch";
@@ -39,7 +38,7 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4 my-4">
           <CategoryCard
             title={"Men"}
-            category={"men"}
+            category={"men/products"}
             imageUrl={
               "https://plus.unsplash.com/premium_photo-1669703777695-f8052a432411?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fG1vZGVsfGVufDB8fDB8fHww"
             }
@@ -48,7 +47,7 @@ export default function Home() {
 
           <CategoryCard
             title={"Women"}
-            category={"women"}
+            category={"women/products"}
             imageUrl={
               "https://plus.unsplash.com/premium_photo-1669704098750-7cd22c35422b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW9kZWx8ZW58MHx8MHx8fDA%3D"
             }
@@ -57,7 +56,7 @@ export default function Home() {
 
           <CategoryCard
             title={"Kids"}
-            category={"kids"}
+            category={"kids/products"}
             imageUrl={
               "https://images.unsplash.com/photo-1541580620-23a640b30338?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGtpZCUyMG1vZGVsfGVufDB8fDB8fHww"
             }

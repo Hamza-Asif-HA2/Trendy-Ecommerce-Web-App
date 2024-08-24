@@ -7,7 +7,7 @@ function KidsWatches() {
   return (
     <section className="Products flex items-center justify-center flex-col">
         <div className="section-title text-2xl md:text-3xl font-bold text-center mt-4">
-          All Products
+          Kid's Watches
         </div>
 
         {loading ? (

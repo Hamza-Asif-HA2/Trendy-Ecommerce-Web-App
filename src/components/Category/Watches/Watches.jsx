@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import CategoryCard from "../../Card/CategoryCard";
 import CateButton from "../../Buttons/CateButton";
-
+import { Link } from "react-router-dom";
 
 function Watches() {
 
@@ -9,11 +9,11 @@ function Watches() {
   return (
    
     <section className="Watches-Category flex justify-center flex-col items-center">
-       
+       <Link to={'all'}>
       <div className="section-title text-2xl md:text-3xl font-bold text-center mt-4">
         Watches
       </div>
-
+      </Link>
       <div className="sm:hidden row-category-btn m-4  flex gap-x-2 overflow-x-auto">
         <CateButton btnText={"Men"} toPage={"watches/menwatch"} />
         <CateButton btnText={"Women"} toPage={"watches/womenwatch"} />
