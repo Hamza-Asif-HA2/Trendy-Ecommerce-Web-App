@@ -34,6 +34,7 @@ import KidsShirts from "./components/Category/Kids/KidsShirts";
 import KidsTrousers from "./components/Category/Kids/KidsTrousers";
 import Cart from "./components/Cart/Cart";
 import ProductFunctions from "./components/Pages/Admin/ProductFunctions";
+import Order from "./components/Pages/Admin/Order";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,6 +43,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="admin" element={<Admin />} >
       <Route path="products" element={<ProductFunctions />} />
+      <Route path="orders" element={<Order />} />
       </Route>
       <Route path="men" element={<Men />}>
         <Route path='products' element={<MenProduct />} />

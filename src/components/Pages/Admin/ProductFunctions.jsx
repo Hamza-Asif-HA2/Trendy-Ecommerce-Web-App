@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useProducts } from "../../Firebase/Fetch";
 import UpdateProductModal from "./UpdateProduct";
 import AddProduct from "./AddProduct"; // Import the AddProduct component

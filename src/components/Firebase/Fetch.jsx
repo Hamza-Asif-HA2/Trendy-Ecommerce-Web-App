@@ -14,13 +14,14 @@ export const ProductsProvider = ({ children }) => {
 
 export const useProducts = (category=['Men', 'Women', 'Kids'], subCategory = ['T-Shirts', 'Shirts', 'Trousers', 'Watches']) => {
   const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         let allProducts = [];
-
+        let allOrders = [];
         // Loop through each category and sub-category passed as props
         for (let Eachcategory of category) {
           for (let EachsubCategory of subCategory) {
@@ -33,7 +34,15 @@ export const useProducts = (category=['Men', 'Women', 'Kids'], subCategory = ['T
             allProducts = [...allProducts, ...productsList];
           }
         }
+        const ordersRef = collection(db, `orders`);
+        const ordersSnapshot = await getDocs(ordersRef);
+        const ordersList = ordersSnapshot.docs.map(doc => ({
+          Oid: doc.id,
+          ...doc.data(),
+        }));
+        allOrders = [...allOrders, ...ordersList];
 
+        setOrders(allOrders);
         setProducts(allProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -45,5 +54,5 @@ export const useProducts = (category=['Men', 'Women', 'Kids'], subCategory = ['T
     fetchProducts();
   }, [category, subCategory]);
 
-  return { products, loading };
+  return { products,orders, loading };
 };
