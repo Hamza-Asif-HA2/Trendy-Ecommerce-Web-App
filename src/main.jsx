@@ -33,13 +33,16 @@ import KidsTshirts from "./components/Category/Kids/KidsTshirts";
 import KidsShirts from "./components/Category/Kids/KidsShirts";
 import KidsTrousers from "./components/Category/Kids/KidsTrousers";
 import Cart from "./components/Cart/Cart";
+import ProductFunctions from "./components/Pages/Admin/ProductFunctions";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="admin" element={<Admin />} />
+      <Route path="admin" element={<Admin />} >
+      <Route path="products" element={<ProductFunctions />} />
+      </Route>
       <Route path="men" element={<Men />}>
         <Route path='products' element={<MenProduct />} />
         <Route path='tshirts' element={<MenTshirts />} />

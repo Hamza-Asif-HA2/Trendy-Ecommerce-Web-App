@@ -30,7 +30,7 @@ function Card({
         <h3 className="text-sm font-semibold mb-2 sm:text-md">
           {productTitle}
         </h3>
-        <h4 className="text-xs sm:text-lg text-gray-400">$ {Number(productPrice)}</h4>
+        <h4 className="text-sm sm:text-lg text-gray-400">$ {Number(productPrice)}</h4>
       </div>
       <p className="text-gray-600 text-sm sm:text-md text-ellipsis">
         {productDesc}

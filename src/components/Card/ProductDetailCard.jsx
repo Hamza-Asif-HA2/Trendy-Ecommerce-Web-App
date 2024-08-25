@@ -8,10 +8,15 @@ function ProductDetailCard({
   onClose,
 }) {
   const { addToCart } = useCart(); // Access addToCart from context
-  const [selectedSize, setSelectedSize] = useState(productSizes[0]); // Manage selected size
+  const [selectedSize, setSelectedSize] = useState(""); // Manage selected size
   const [quantity, setQuantity] = useState(1); // Manage quantity
 
   const handleAddToCart = () => {
+    if (selectedSize === '')
+      {
+        alert('Please Select a Size');
+        return;
+      }
     const item = {
       name: productTitle,
       price: productPrice,
@@ -19,6 +24,8 @@ function ProductDetailCard({
       quantity,
       imageUrl: productImageUrl,
     };
+
+ 
     addToCart(item); // Add item to cart using context
     onClose(); // Optionally close the modal after adding to cart
   };
