@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useProducts } from "../../Firebase/Fetch";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../Firebase/firebase";
 
 function Order() {
   const { orders, loading } = useProducts();
-
+  let [totalRevenue, setTotalRevenue] = useState(0);
+  orders.forEach(element => {
+    totalRevenue += element.totalPrice;
+    setTotalRevenue(totalRevenue);
+  });
   const handleStatusUpdate = async (orderId, currentStatus) => {
     const newStatus = window.prompt("Enter new status (Delivered or Pending):", currentStatus);
     if (newStatus === "Delivered"  || newStatus === "pending") {
@@ -30,6 +34,9 @@ function Order() {
         </div>
         <span className="order-count text-white font-bold text-sm m-2 p-2 bg-orange-600 rounded-lg">
           Order Count: {orders.length}
+        </span>
+        <span className="order-count text-white font-bold text-sm m-2 p-2 bg-orange-600 rounded-lg">
+          Total Revenue: ${totalRevenue}
         </span>
         {loading ? (
           <div className="flex items-center justify-center my-6">
@@ -59,6 +66,7 @@ function Order() {
                       </p>
                       <p className="text-gray-500 md:text-xs">
                         {order.products.map((product, index) => (
+                        
                           <div key={index} className="mb-2">
                             <p className="text-gray-500 md:text-xs">
                               <strong>Product Name:</strong> {product.name}
@@ -72,6 +80,7 @@ function Order() {
                             <p className="text-gray-500 md:text-xs">
                               <strong>Size:</strong> {product.size}
                             </p>
+                           
                           </div>
                         ))}
                       </p>
