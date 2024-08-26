@@ -21,8 +21,8 @@ export default function Home() {
 
             <div className="w-auto sm:mt-0 mt-8">
               <img
-                className="w-96"
-                src="https://i.ibb.co/5BCcDYB/Remote2.png"
+                className="w-96 rounded-lg shadow-lg -rotate-3 "
+                src="https://plus.unsplash.com/premium_photo-1700824489685-bc3db3685d7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGNsb3RoZXMlMjBzaG9wfGVufDB8fDB8fHww"
                 alt="image1"
               />
             </div>

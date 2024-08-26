@@ -61,7 +61,7 @@ const Cart = () => {
       
 
   return (
-    <div className="relative container mx-auto p-6">
+    <div className="relative container max-w-7xl mx-auto p-6">
       <h1 className="text-center sm:text-left text-3xl font-bold mb-4">Checkout</h1>
 
       {cartItems.length === 0 ? (

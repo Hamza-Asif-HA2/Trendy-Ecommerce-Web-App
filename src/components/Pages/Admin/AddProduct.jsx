@@ -61,20 +61,20 @@ const AddProduct = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md mx-auto relative">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 w-full z-50">
+      <div className="m-2  bg-white p-6 rounded-lg shadow-lg w-full max-w-md max-h-fit xl:h-fit  mx-auto relative">
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+          className="text-4xl mr-2 absolute top-3 right-3 text-gray-500 hover:text-gray-700"
         >
           &times;
         </button>
-        <h2 className="text-2xl font-bold text-center mb-4">
+        <h2 className="text-xl font-bold text-center mb-4">
           Upload New Product
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Title:
             </label>
             <input
@@ -86,7 +86,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Price:
             </label>
             <input
@@ -98,7 +98,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Description:
             </label>
             <textarea
@@ -109,7 +109,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Sizes (comma-separated):
             </label>
             <input
@@ -121,7 +121,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Category:
             </label>
             <select
@@ -137,7 +137,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             </select>
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Sub-Category:
             </label>
             <select
@@ -154,7 +154,7 @@ const AddProduct = ({ isOpen, onClose }) => {
             </select>
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
+            <label className="block text-md font-medium mb-1">
               Product Image:
             </label>
             <input
@@ -167,7 +167,7 @@ const AddProduct = ({ isOpen, onClose }) => {
           </div>
           <button
             type="submit"
-            className="w-full bg-orange-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 disabled:bg-gray-400"
+            className="w-full text-sm bg-orange-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 disabled:bg-gray-400"
             disabled={loading}
           >
             {loading ? "Uploading..." : "Upload Product"}

@@ -5,7 +5,7 @@ import { useProducts } from "../../Firebase/Fetch";
 function WomenWatches() {
   const { products, loading } = useProducts(["Women"], ["Watches"]);
   return (
-    <section className="Products flex items-center justify-center flex-col">
+    <section className="max-w-7xl Products flex items-center justify-center flex-col">
         <div className="section-title text-2xl md:text-3xl font-bold text-center mt-4">
           Women's Watches
         </div>

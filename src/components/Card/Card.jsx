@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SizeButton from "../Buttons/SizeButton";
 import ProductDetailCard from "./ProductDetailCard";
+import { Link } from "react-router-dom";
 
 function Card({
   productTitle,
@@ -20,7 +21,7 @@ function Card({
   };
 
   return (
-    <div className="relative bg-gray-100 p-3 rounded-lg shadow-sm sm:mx-1 max-w-64">
+    <div className="relative bg-black/5 p-3 rounded-lg  sm:mx-1 max-w-64">
       <img
         src={productImageUrl}
         alt={productTitle}
@@ -30,7 +31,9 @@ function Card({
         <h3 className="text-sm font-semibold mb-2 sm:text-md">
           {productTitle}
         </h3>
-        <h4 className="text-sm sm:text-lg text-gray-400">$ {Number(productPrice)}</h4>
+        <h4 className="text-sm sm:text-lg text-gray-400">
+          $ {Number(productPrice)}
+        </h4>
       </div>
       <p className="text-gray-600 text-sm sm:text-md text-ellipsis">
         {productDesc}
@@ -38,7 +41,9 @@ function Card({
 
       <div className="hidden sm:flex size-div mt-2 flex-wrap">
         {productSizes.map((size, index) => (
-          <SizeButton key={index} size={size} />
+          <Link onClick={handleAddToCart}>
+            <SizeButton key={index} size={size} />
+          </Link>
         ))}
       </div>
 

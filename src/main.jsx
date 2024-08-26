@@ -1,4 +1,5 @@
 import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
@@ -35,13 +36,45 @@ import KidsTrousers from "./components/Category/Kids/KidsTrousers";
 import Cart from "./components/Cart/Cart";
 import ProductFunctions from "./components/Pages/Admin/ProductFunctions";
 import Order from "./components/Pages/Admin/Order";
-
+import AdminLogin from "./components/Auth/Login/Login";
+import PrivateRoute from "./components/Auth/Login/PrivateRoute";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="admin" element={<Admin />} >
+      <Route path="admin/login" element={<AdminLogin />} />
+      <Route path="admin" element={
+        <PrivateRoute>
+        <Admin />
+        </PrivateRoute>
+        } >
+     
+     
+      <Route
+        path="/admin/products"
+        element={
+          <PrivateRoute>
+            <ProductFunctions />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admin/products/addproduct"
+        element={
+          <PrivateRoute>
+            <ProductFunctions />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admin/orders"
+        element={
+          <PrivateRoute>
+            <Order />
+          </PrivateRoute>
+        }
+      />
       <Route path="products" element={<ProductFunctions />} />
       <Route path="orders" element={<Order />} />
       </Route>
