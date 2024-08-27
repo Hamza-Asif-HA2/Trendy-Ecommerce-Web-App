@@ -1,15 +1,18 @@
-import React, { useState } from "react";
 import { useProducts } from "../../Firebase/Fetch";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../Firebase/firebase";
+import { useState, useEffect } from "react";
 
 function Order() {
   const { orders, loading } = useProducts();
-  let [totalRevenue, setTotalRevenue] = useState(0);
-  orders.forEach(element => {
-    totalRevenue += element.totalPrice;
-    setTotalRevenue(totalRevenue);
-  });
+  const [totalRevenue, setTotalRevenue] = useState(0);
+
+  useEffect(() => {
+    // Calculate total revenue whenever the orders change
+    const revenue = orders.reduce((acc, order) => acc + Number(order.totalPrice), 0);
+    setTotalRevenue(revenue);
+  }, [orders]);
+
   const handleStatusUpdate = async (orderId, currentStatus) => {
     const newStatus = window.prompt("Enter new status (Delivered or Pending):", currentStatus);
     if (newStatus === "Delivered"  || newStatus === "pending") {
@@ -66,7 +69,7 @@ function Order() {
                       </p>
                       <p className="text-gray-500 md:text-xs">
                         {order.products.map((product, index) => (
-                        
+                         
                           <div key={index} className="mb-2">
                             <p className="text-gray-500 md:text-xs">
                               <strong>Product Name:</strong> {product.name}
@@ -79,10 +82,16 @@ function Order() {
                             </p>
                             <p className="text-gray-500 md:text-xs">
                               <strong>Size:</strong> {product.size}
-                            </p>
-                           
+                            </p> 
                           </div>
+                          
                         ))}
+                        
+                      </p>
+                      <p className="text-gray-500 md:text-xs"
+                     
+                      >
+                        Order Total Price: {order.totalPrice}
                       </p>
                     </div>
                   </div>
