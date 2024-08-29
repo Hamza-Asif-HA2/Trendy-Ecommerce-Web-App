@@ -68,19 +68,6 @@ Once installed, you can explore the various features of the platform:
 3. **Shopping Cart:** Add desired items to the cart, adjust quantities, or remove items as needed.
 4. **Checkout:** Complete the purchase by following the guided checkout process.
 
-## 🤝 Contributing
-
-We welcome contributions to make Trendy even better! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Open a pull request.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## 📷 Screenshots
 
@@ -95,6 +82,45 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### About Page
 
 ![AboutPage](https://github.com/user-attachments/assets/676bbd7d-dc26-4146-8c14-61cd15cc7039)
+
+
+### Men Page
+
+![MenPage](https://github.com/user-attachments/assets/e8de158f-a3ab-44d5-b2cc-6796d488852c)
+
+
+### Women Page
+
+![WomenPage](https://github.com/user-attachments/assets/6926c0a1-ab66-4cf5-b835-ee6699b3a94d)
+
+### Kids Page
+
+![KidsPage](https://github.com/user-attachments/assets/e2beb1b2-1b75-4104-b8fb-b3801763c754)
+
+
+### Cart
+
+![CartPage](https://github.com/user-attachments/assets/afd57b94-3a9c-45e0-a0f9-233ebd0ba7d7)
+
+
+### Checkout
+
+![Checkout](https://github.com/user-attachments/assets/5671b0ba-04f7-4cf9-8c97-b1f3f0926517)
+
+### Admin:
+#### Login:
+
+![Admin Login](https://github.com/user-attachments/assets/82c94520-23d1-479f-a0b8-3bb24aa2a95a)
+
+#### Dashboard
+
+![Admin Dashboard](https://github.com/user-attachments/assets/cf309382-a267-4d41-a509-ff8f80c85e17)
+
+
+#### Orders
+
+![Orders](https://github.com/user-attachments/assets/1f83ef5e-c274-42ec-9a7e-8f5fd0b20ca4)
+
 
 ---
 
