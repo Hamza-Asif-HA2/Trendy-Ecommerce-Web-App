@@ -9,7 +9,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBVYJUv8XlECDzTmgcv5lQsF2sFXYiLujk",
+  apiKey: "YOUR_API_KEY_HERE",
   authDomain: "trendy-ecommerce-627ae.firebaseapp.com",
   projectId: "trendy-ecommerce-627ae",
   storageBucket: "trendy-ecommerce-627ae.appspot.com",
